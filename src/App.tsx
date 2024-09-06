@@ -4,34 +4,34 @@ import { CityAlt, WeatherAlt } from './types'
 
 const CITIES: Record<string, CityAlt> = {
   bsar: {
-    id: 'bs-ar',
+    id: 'bs-as',
     name: 'Bs. As.',
-    lat: -34.6157129,
-    lon: -58.5981051,
+    lat: -34.6131500,
+    lon: -58.3772300,
   },
   cordoba: {
     id: 'cordoba',
-    name: 'Cordoba',
-    lat: -32.47298,
-    lon: -68.0972914,
+    name: 'Córdoba',
+    lat: -31.4135000,
+    lon: -64.1810500,
   },
   jujuy: {
     id: 'jujuy',
     name: 'Jujuy',
-    lat: -23.1751717,
-    lon: -68.3224852,
+    lat: -24.1945700,
+    lon: -65.2971200,
   },
   tucuman: {
     id: 'tucuman',
-    name: 'Tucuman',
-    lat: -26.8328589,
-    lon: -65.2225937,
+    name: 'Tucumán',
+    lat: -27.0000000,
+    lon: -65.5000000,
   },
   misiones: {
     id: 'misiones',
     name: 'Misiones',
-    lat: -26.8240001,
-    lon: -56.1672424,
+    lat: -27.3670800,
+    lon: -55.8960800,
   },
 }
 
@@ -58,7 +58,7 @@ function App() {
     return <div>La ciudad no existe o no hay datos del clima</div>
   }
 
-  console.log(weather.forecast.length)
+  // console.log(weather)
 
   return (
     <main>
