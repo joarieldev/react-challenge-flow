@@ -10,6 +10,7 @@ export type WeatherAlt = {
     name: string
   }
   forecast: {
+    icon: string
     date: string
     min: number
     max: number

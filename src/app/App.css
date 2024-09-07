@@ -1,0 +1,53 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 4px;
+}
+
+.title{
+  font-weight: 500;
+}
+.sub-title{
+  margin: 0;
+  font-weight: 400;
+}
+.city{
+  width: 100%;
+  max-width: 150px;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+}
+
+.city:hover {
+  border: 1px solid;
+}
+
+.forecast{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.forecast .forecast-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.forecast .forecast-item p {
+  margin: 0;
+}
+
+.forecast .forecast-item .date {
+  width: 100%;
+  max-width: 100px;
+}
+
+.forecast .forecast-item .celsius {
+  width: 160px;
+}

@@ -12,6 +12,7 @@ export const formatWeather = (weather: RawWeather): WeatherAlt => {
       name: weather.city.name,
     },
     forecast: [first, second, third, fourth, fifth].map((forcast) => ({
+      icon: forcast.weather[0].icon,
       date: new Date(forcast.dt * 1000).toLocaleDateString('es-AR'),
       min: kelvinToCelcius(forcast.main.temp_min),
       max: kelvinToCelcius(forcast.main.temp_max),
@@ -23,7 +24,9 @@ export const api = {
   weather: {
     fetch: async (city: CityAlt): Promise<WeatherAlt> => {
       const request = await fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?lat=${city.lat}&lon=${
+        `https://api.openweathermap.org/data/2.5/forecast?lat=${
+          city.lat
+        }&lon=${
           city.lon
         }&appid=${import.meta.env.VITE_API_KEY}`
       )
